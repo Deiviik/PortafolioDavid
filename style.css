@@ -138,7 +138,7 @@ header ul li {
 header ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 header ul li a:hover {
@@ -307,19 +307,87 @@ section h2 {
   position: relative;
   z-index: 2;
 }
-/*.btn-proyecto:hover {
-    background-color: #4cae4c;
-
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+.contact-container {
+  background-color: #1a1a1a;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #00b7ff;
+  width: 40%;
+  max-width: 500px;
+  text-align: center;
+    margin: auto;
 }
 
-.btn-proyecto:last-child {
-    margin-right: 0;
+.contact-text {
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
-*/
+.contact-text h2 {
+  font-size: 3.5rem;
+  font-family: "League Spartan", sans-serif;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 5px black;
+}
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #00ffff;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #00b7ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00ffff;
+  color: black;
+}
 /* Sección Contacto */
 #contacto p {
     font-size: 1.1rem;
+    padding: 40px;
 }
 
 #contacto .redes-sociales {
@@ -370,19 +438,42 @@ footer {
 
 /* Diseño Responsivo */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-    }
+ header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    header ul {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: center;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    header ul li {
-        margin: 5px 0;
-    }
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 1rem;
+    padding: 6px 0;
+    border-radius: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  header ul li {
+    margin: 1px 0;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    padding-left: 20px;
+    white-space: nowrap;
+  }
+
+  header ul li a {
+    font-size: 1.05rem;
+  }
+}
 
     #inicio h1 {
         font-size: 2.5rem;
@@ -403,4 +494,34 @@ footer {
     #habilidades .icono-skill i {
         font-size: 3rem;
     }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .contact-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+  }
+}
 }

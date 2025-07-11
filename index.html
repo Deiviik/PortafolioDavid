@@ -162,7 +162,20 @@
 
     <section id="contacto">
         <h2>Ponte en Contacto</h2>
-        <p>Si tienes alguna pregunta, propuesta de proyecto o simplemente quieres saludar, no dudes en escribirme a <a href="mailto:juandavidibarracollazos@gmail.com">juandavidibarracollazos@gmail.com</a>. También puedes encontrarme en mis redes sociales:</p>
+        <div class="contact-container" data-aos="fade-left" data-aos-delay="400">
+        <form class="contact-form" action="https://formspree.io/f/xzzgljqr" method="POST">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+          <label for="subject">Asunto</label>
+          <input type="text" id="subject" name="subject" required>
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+        <p>Si tienes alguna pregunta, propuesta de proyecto o simplemente quieres saludar, no dudes en escribirme </p>
         <div class="redes-sociales">
             <a href="https://linkedin.com/in/alexdeveloper" target="_blank" aria-label="LinkedIn de Alex Developer"><i class="fab fa-linkedin fa-bounce"></i></a>
             <a href="https://github.com/Deiviik" target="_blank" aria-label="GitHub de Alex Developer"><i class="fab fa-github fa-bounce"></i></a>
